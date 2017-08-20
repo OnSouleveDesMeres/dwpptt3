@@ -1,0 +1,7 @@
+*.log
+.htaccess
+sitemap.xml
+sitemap.xml.gz
+myPDO.class.php
+
+/vendor/
