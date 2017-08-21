@@ -1,0 +1,19 @@
+/*
+ * Base structure
+ */
+
+/*
+ * Typography
+ */
+
+h1 {
+    margin : 20px;
+}
+
+body{
+    background-color: #dcdcdc;
+}
+
+body > .container{
+    background-color: white;
+}
