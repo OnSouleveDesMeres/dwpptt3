@@ -17,3 +17,16 @@ body{
 body > .container{
     background-color: white;
 }
+
+h3.no-render{
+    overflow-x: scroll;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.donations{
+    background-color: #dcdcdc;
+    border-radius: 5px;
+    padding-top: 10px;
+}

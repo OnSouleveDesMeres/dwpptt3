@@ -34,23 +34,23 @@ $html->appendContent('<div class="container">
             <div class="row">
                 <div class="form-group col-md-5">
                     <label for="exampleInputEmail1">Last name</label>
-                    <input type="text" class="form-control" placeholder="Enter your last name" name="name" pattern="[A-Za-z]*">
+                    <input type="text" class="form-control" placeholder="Enter your last name" name="name" pattern="[A-Za-z]*" required>
                   </div>
                   <div class="form-group col-md-5 offset-md-2">
                     <label for="exampleInputPassword1">First name</label>
-                    <input type="text" class="form-control" placeholder="Enter your first name" name="fname" pattern="[A-Za-z]*">
+                    <input type="text" class="form-control" placeholder="Enter your first name" name="fname" pattern="[A-Za-z]*" required>
                   </div>
                   <div class="form-group col-md-5">
                     <label for="exampleInputPassword1">Birthdate</label>
-                    <input type="text" class="form-control" placeholder="Birthdate to format DD/MM/YYYY" name="datens" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}">
+                    <input type="text" class="form-control" placeholder="Birthdate to format DD/MM/YYYY" name="datens" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" required>
                   </div>
                   <div class="form-group col-md-5 offset-md-2">
                     <label for="exampleInputPassword1">Days to get free</label>
-                    <input type="text" class="form-control" placeholder="Number of days to get free" name="period" pattern="[1-9]">
+                    <input type="text" class="form-control" placeholder="Number of days to get free" name="period" pattern="[1-9]" required>
                   </div>
                   <div class="form-group col-md-6 offset-md-3">
                     <label for="exampleInputPassword1">Your disease (Votre maladie)</label>
-                    <input type="text" class="form-control" placeholder="Your disease" name="maladie">
+                    <input type="text" class="form-control" placeholder="Your disease" name="maladie" required>
                   </div>
           
               </div>
@@ -64,26 +64,36 @@ $html->appendContent('<div class="container">
                 <div style="height:50px;" ></div>
                 <div class="form-group col-md-5">
                     <label for="exampleInputEmail1">Doctor street name</label>
-                    <input type="text" class="form-control" placeholder="Doctor\'s street name" name="mstreet">
+                    <input type="text" class="form-control" placeholder="Doctor\'s street name" name="mstreet" required>
                   </div>
                   <div class="form-group col-md-5 offset-md-2">
                     <label for="exampleInputPassword1">Doctor street number</label>
-                    <input type="text" class="form-control" placeholder="Doctor\'s street number" name="mnum" pattern="[0-9]*">
+                    <input type="text" class="form-control" placeholder="Doctor\'s street number" name="mnum" pattern="[0-9]*" required>
                   </div>
                   <div class="form-group col-md-5">
                     <label for="exampleInputPassword1">Doctor zip code (code postal)</label>
-                    <input type="text" class="form-control" placeholder="Doctor zip code" name="mcp" pattern="[0-9]*">
+                    <input type="text" class="form-control" placeholder="Doctor zip code" name="mcp" pattern="[0-9]*" required>
                   </div>
                   <div class="form-group col-md-5 offset-md-2">
                     <label for="exampleInputPassword1">Doctor city</label>
-                    <input type="text" class="form-control" placeholder="Doctor city" name="mcity">
+                    <input type="text" class="form-control" placeholder="Doctor city" name="mcity" required>
                   </div>
           
               </div>
           
             <div style="height:50px;" ></div>
-          <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+            <div class="col-xs-12">
+                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+            </div>
         </form>
+        <div style="height:50px;" ></div>
+        <div class="container">
+            <div class="col-lg-8 offset-lg-2 donations">
+                <div class="col-xs-12 text-center"><h3>Want to donate ? Copy this address</h3></div>
+                <div class="dropdown-divider"></div>
+                <div class="col-xs-12 text-center"><h3 class="no-render">32DnzSSxaE2oAyZKWdPgt5SWvnyYGn2WiD</h3></div>
+            </div>
+        </div>
         <div style="height:50px;" ></div>
       </div>
     </div>
