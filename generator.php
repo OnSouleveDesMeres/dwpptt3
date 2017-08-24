@@ -10,9 +10,9 @@ require_once 'vendor/autoload.php';
 require_once('vendor/tecnickcom/tcpdf/examples/tcpdf_include.php');
 if(isset($_POST) && !is_null($_POST)){
 
-    if (isset($_POST['']) && !is_null($_POST['']) && isset($_POST['']) && !is_null($_POST['']) && isset($_POST['']) && !is_null($_POST['']) &&
-        isset($_POST['']) && !is_null($_POST['']) && isset($_POST['']) && !is_null($_POST['']) && isset($_POST['']) && !is_null($_POST['']) &&
-        isset($_POST['']) && !is_null($_POST['']) && isset($_POST['']) && !is_null($_POST['']) && isset($_POST['']) && !is_null($_POST[''])){
+    if (isset($_POST['period']) && !is_null($_POST['period']) && isset($_POST['datens']) && !is_null($_POST['datens']) && isset($_POST['name']) && !is_null($_POST['name']) &&
+        isset($_POST['fname']) && !is_null($_POST['fname']) && isset($_POST['mstreet']) && !is_null($_POST['mstreet']) && isset($_POST['mnum']) && !is_null($_POST['mnum']) &&
+        isset($_POST['mcp']) && !is_null($_POST['mcp']) && isset($_POST['mcity']) && !is_null($_POST['mcity']) && isset($_POST['maladie']) && !is_null($_POST['maladie'])){
 
         $imgPrint = 'img/print.jpg';
         $imgSign = 'img/sign.png';
