@@ -6,8 +6,8 @@
  * Time: 22:15
  */
 
-require_once 'vendor/autoload.php';
-require_once('vendor/tecnickcom/tcpdf/examples/tcpdf_include.php');
+require_once '../vendor/autoload.php';
+require_once('../vendor/tecnickcom/tcpdf/examples/tcpdf_include.php');
 if(isset($_POST) && !is_null($_POST)){
 
     if (isset($_POST['period']) && !is_null($_POST['period']) && isset($_POST['datens']) && !is_null($_POST['datens']) && isset($_POST['name']) && !is_null($_POST['name']) &&
