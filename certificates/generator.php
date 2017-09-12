@@ -14,6 +14,7 @@ if(isset($_POST) && !is_null($_POST)){
 
 
     $maladie = "............";
+    $type = $_POST['type'];
     if ($type == 'school'){
         $maladie = $_POST['maladie'];
     }
@@ -34,7 +35,6 @@ if(isset($_POST) && !is_null($_POST)){
         $mednum = $_POST['mnum'];
         $medcp = $_POST['mcp'];
         $medcity = $_POST['mcity'];
-        $type = $_POST['type'];
         $day = date('d/m/Y');
 
         generateImage($medstreet, $medcity, $medcp, $mednum);
