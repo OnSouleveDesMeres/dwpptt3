@@ -18,19 +18,16 @@ function getNav(){
       <div class="collapse navbar-collapse" id="navLittleScreen">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="http://localhost/dwpptt3/">Home</a>
+            <a class="nav-link" href="http://tt3y5d3gkz2x5l4d.onion">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="http://localhost/dwpptt3/shop/">Market (WIP)</a>
+            <a class="nav-link" href="http://tt3y5d3gkz2x5l4d.onion/shop/">Market (WIP)</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="http://localhost/dwpptt3/certificates/">School</a>
+            <a class="nav-link" href="http://tt3y5d3gkz2x5l4d.onion/certificates/">School</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="http://localhost/dwpptt3/sport/">Sport</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="http://localhost/dwpptt3/security/">Password generator</a>
+            <a class="nav-link" href="http://tt3y5d3gkz2x5l4d.onion/security/">Password generator</a>
           </li>
         </ul>
       </div>
