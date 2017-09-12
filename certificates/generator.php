@@ -39,7 +39,7 @@ if(isset($_POST) && !is_null($_POST)){
 
         generateImage($medstreet, $medcity, $medcp, $mednum);
 
-        $imgPrint = "../img/".$medcity;
+        $imgPrint = "../img/".$medcity.".png";
 
         $checkBoxesGenerated = '<table>';
 

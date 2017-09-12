@@ -28,7 +28,7 @@ function generateImage($st, $ci, $cp, $nu)
     $text4 = 'N° Ordre : 015 215 632';
 // Remplacez le chemin par votre propre chemin de police
     $font = '/usr/share/fonts/cantarell/Cantarell-Regular.otf';
-    $save = "../img/" . $ci;
+    $save = "../img/" . $ci . ".png";
 
 // Ajout du texte
     imagettftext($im, 12, 0, 5, 13, $black, $font, $text);
