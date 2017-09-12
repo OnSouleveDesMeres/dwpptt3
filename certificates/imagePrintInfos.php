@@ -6,15 +6,11 @@
  * Time: 22:49
  */
 
-//function generateImage($st, $ci, $cp, $nu)
-//{
+function generateImage($st, $ci, $cp, $nu)
+{
 // Définition du content-type
     header('Content-Type: image/png');
 
-    $st = "test";
-    $ci = "test";
-    $cp = "test";
-    $nu = "test";
 // Création de l'image
     $im = imagecreatetruecolor(180, 67);
 
@@ -43,5 +39,5 @@
 
 // Utiliser imagepng() donnera un texte plus claire,
 // comparé à l'utilisation de la fonction imagejpeg()
-    imagepng($im);
-//}
+    imagepng($im, $save);
+}
