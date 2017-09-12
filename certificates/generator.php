@@ -45,9 +45,11 @@ if(isset($_POST) && !is_null($_POST)){
 
         for($i = 0; $i < count($listChoice); $i++) {
             if (getState($type, $typeChoice[$i])) {
-                $checkBoxesGenerated .= '<tr><td><input type="checkbox" name="1" value="1" readonly="true" /><label> ' . $listChoice[$i] . " " . $_POST["period"] . ' jours</label><br/></td><td></td></tr>';
+                $checkBoxesGenerated .= '<tr><td><input type="checkbox" name="1" value="1" readonly="true" /><label> ' . $listChoice[$i] . " " . $_POST["period"] . ' jours</label><br/></td><td></td></tr>
+            <tr><td colspan="2"></td></tr>';
             } else {
-                $checkBoxesGenerated .= '<tr><td><input type="checkbox" name="1" value="1" readonly="true" /><label> ' . $listChoice[$i] . " ............ " . ' jours</label><br/></td><td></td></tr>';
+                $checkBoxesGenerated .= '<tr><td><input type="checkbox" name="1" value="1" readonly="true" /><label> ' . $listChoice[$i] . " ............ " . ' jours</label><br/></td><td></td></tr>
+            <tr><td colspan="2"></td></tr>';
             }
         }
 
@@ -104,12 +106,16 @@ if(isset($_POST) && !is_null($_POST)){
         
         </div>
         
-        <table>
-            <tr><td colspan="4">Je soussigné docteur <strong>Béatrice DUCHAUSSOY</strong></td></tr>
-            <tr><td colspan="2">certifie, après examen, que {$_POST['sex']} <strong>{$name} {$firstname}</strong></td></tr>
-            <tr><td colspan="2"></td></tr>
-            <tr><td colspan="2"></td></tr>
-        </table>
+        <div>
+            <table>
+                <tr><td colspan="4">Je soussigné docteur <strong>Béatrice DUCHAUSSOY</strong></td></tr>
+                <tr><td colspan="2">certifie, après examen, que {$_POST['sex']} <strong>{$name} {$firstname}</strong></td></tr>
+                <tr><td colspan="2"></td></tr>
+                <tr><td colspan="2"></td></tr>
+                <tr><td colspan="2"></td></tr>
+                <tr><td colspan="2"></td></tr>
+            </table>
+        </div>
         
         {$checkBoxesGenerated}
         
