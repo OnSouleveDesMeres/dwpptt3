@@ -7,15 +7,24 @@
  */
 
 require_once '../vendor/autoload.php';
+require_once 'requestCheckBoxState.php';
 require_once('../vendor/tecnickcom/tcpdf/examples/tcpdf_include.php');
+require_once 'imagePrintInfos.php';
 if(isset($_POST) && !is_null($_POST)){
 
-    if (isset($_POST['period']) && !is_null($_POST['period']) && isset($_POST['datens']) && !is_null($_POST['datens']) && isset($_POST['name']) && !is_null($_POST['name']) &&
-        isset($_POST['fname']) && !is_null($_POST['fname']) && isset($_POST['mstreet']) && !is_null($_POST['mstreet']) && isset($_POST['mnum']) && !is_null($_POST['mnum']) &&
-        isset($_POST['mcp']) && !is_null($_POST['mcp']) && isset($_POST['mcity']) && !is_null($_POST['mcity']) && isset($_POST['maladie']) && !is_null($_POST['maladie'])){
 
-        $imgPrint = 'img/print.jpg';
-        $imgSign = 'img/sign.png';
+    $maladie = "............";
+    if ($type == 'school'){
+        $maladie = $_POST['maladie'];
+    }
+    if (isset($_POST['period']) && !is_null($_POST['period']) && isset($_POST['name']) && !is_null($_POST['name']) &&
+        isset($_POST['fname']) && !is_null($_POST['fname']) && isset($_POST['mstreet']) && !is_null($_POST['mstreet']) && isset($_POST['mnum']) && !is_null($_POST['mnum']) &&
+        isset($_POST['mcp']) && !is_null($_POST['mcp']) && isset($_POST['mcity']) && !is_null($_POST['mcity']) && isset($_POST['type']) && !is_null($_POST['type'])){
+
+        $imgSign = '../img/sign.png';
+
+        $listChoice = array(' présente un état de santé nécessitant un arrêt de travail de ', " ne pourra fréquenter l'école, le collège, le lycée, pour cause de {$maladie} pendant ", " doit être dispensé d'éducation physique et sportive pendant ", ' est exempté de piscine pendant ');
+        $typeChoice = array('work', 'school', 'sport', 'swim');
 
         $period = $_POST['period'];
         $datens = $_POST['datens'];
@@ -25,11 +34,27 @@ if(isset($_POST) && !is_null($_POST)){
         $mednum = $_POST['mnum'];
         $medcp = $_POST['mcp'];
         $medcity = $_POST['mcity'];
-        $maladie = $_POST['maladie'];
-
-        $dateEnd = date('d/m/Y', strtotime($period." days"));
+        $type = $_POST['type'];
         $day = date('d/m/Y');
 
+        generateImage($medstreet, $medcity, $medcp, $mednum);
+
+        $imgPrint = "../img/".$medcity;
+
+        $checkBoxesGenerated = '<table>';
+
+        for($i = 0; $i < count($listChoice); $i++) {
+            if (getState($type, $typeChoice[$i])) {
+                $checkBoxesGenerated .= '<tr><td><input type="checkbox" name="1" value="1" readonly="true" /><label> ' . $listChoice[$i] . " " . $_POST["period"] . ' jours</label><br/></td><td></td></tr>';
+            } else {
+                $checkBoxesGenerated .= '<tr><td><input type="checkbox" name="1" value="1" readonly="true" /><label> ' . $listChoice[$i] . " ............ " . ' jours</label><br/></td><td></td></tr>';
+            }
+        }
+
+        $checkBoxesGenerated .= '</table>';
+
+        $randomX = rand(80, 100);
+        $randomY = rand(20,22);
 
         // create new PDF document
         $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
@@ -54,7 +79,8 @@ if(isset($_POST) && !is_null($_POST)){
         // add a page
         $pdf->AddPage('L', 'A4');
 
-        $pdf->Image($imgSign, "55", "150", "75", "30");
+        $pdf->Image($imgPrint,$randomX, $randomY, "50", "15");
+        $pdf->Image($imgSign, "70", "20", "75", "30", 'png');
 
         //MC generation
 
@@ -65,33 +91,29 @@ if(isset($_POST) && !is_null($_POST)){
         </div>
         <table>
             <tr>
-                <th colspan="2" style="text-align: center;"><h1>CERTIFICAT MEDICAL</h1></th><th></th><th></th><td></td>
+                <th colspan="2"><h2>CERTIFICAT MEDICAL</h2></th><th colspan="2" rowspan="5" style="font-size: 7px; text-align: center;border-right: 1px solid black; border-left: 1px solid black; border-top: 1px solid black; border-bottom: 1px solid black;">signature du médecin</th><th></th><th></th><th></th><th></th>
             </tr>
-            <tr><td colspan="2"></td></tr>
-            <tr><td colspan="2"></td></tr>
-            <tr><td colspan="2"></td></tr>
-            <tr><td colspan="2"></td></tr>
-            <tr><td colspan="2"></td></tr>
-            <tr><td colspan="2"></td></tr>
-            <tr><td colspan="2"></td></tr>
-            <tr><td colspan="2"></td></tr>
+            <tr><td colspan="2" style="font-size: 7px">Délivré sur la demande du patient et remis en main propres</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td colspan="2"></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td colspan="2">à : {$medcity}</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td colspan="2">le : {$day}</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td colspan="2"></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td colspan="2"></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td colspan="2"></td><td></td><td></td><td></td><td></td><td></td></tr>
         </table>
         
         </div>
         
         <table>
             <tr><td colspan="4">Je soussigné docteur <strong>Béatrice DUCHAUSSOY</strong></td></tr>
-            <tr><td colspan="2">certifie avoir examiné ce jour <strong>{$name} {$firstname}</strong></td></tr>
-            <tr><td colspan="2">né le <strong>{$datens}</strong></td></tr>
-            <tr><td colspan="2">souffrant de <strong>{$maladie}</strong></td></tr>
-            <tr><td colspan="2">Son état actuel ne lui permettra pas d'assister aux cours jusqu'au <strong>{$dateEnd}</strong></td></tr>
+            <tr><td colspan="2">certifie, après examen, que {$_POST['sex']} <strong>{$name} {$firstname}</strong></td></tr>
             <tr><td colspan="2"></td></tr>
             <tr><td colspan="2"></td></tr>
-            <tr><td colspan="2"></td></tr>
-            <tr><td colspan="2"></td></tr>
-            <tr><td colspan="2"></td></tr>
-            <tr><td colspan="2"></td></tr>
-        </table>    
+        </table>
+        
+        {$checkBoxesGenerated}
+        
+        <!-- A transformer en iamge avec GD
         <table>
             <tr>
             <th></th><th style="border-right: 1px solid black; border-left: 1px solid black; border-top: 1px solid black; text-align: center;">Dr. DUCHAUSSOY B.</th><th></th><th></th><th></th>
@@ -108,15 +130,8 @@ if(isset($_POST) && !is_null($_POST)){
             <tr>
             <td></td><td style="border-right: 1px solid black; border-left: 1px solid black; border-bottom: 1px solid black; text-align: center;">N° Ordre : 015 215 632</td><td></td><td></td><td></td>
             </tr>
-            <tr><td colspan="2"></td></tr>
-            <tr><td colspan="2"></td></tr>
-            <tr><td colspan="2"></td></tr>
-            <tr><td colspan="2"></td></tr>
-            <tr><td colspan="2"></td></tr>
-            <tr>
-                <th colspan="2" style="text-align: center;"><span>Certificat remis à la demande de l'intéressé en main propre le <strong>{$day}</strong></span></th><th></th><th></th><td></td>
-            </tr>
         </table>
+-->
 HTML;
 
         $pdf->writeHTML($html, true, false, true, false, '');

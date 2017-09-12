@@ -10,7 +10,30 @@ function getNav(){
 
     $html = '
 <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse stickcontent">
-    <span class="navbar-brand text-center">You\'re here to become lazy !</span>
+      <span class="navbar-brand text-center">You\'re here to become lazy man</span>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navLittleScreen" aria-controls="navLittleScreen" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navLittleScreen">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost/dwpptt3/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost/dwpptt3/shop/">Market (WIP)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost/dwpptt3/certificates/">School</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost/dwpptt3/sport/">Sport</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost/dwpptt3/security/">Password generator</a>
+          </li>
+        </ul>
+      </div>
 </nav>';
 
     return $html;

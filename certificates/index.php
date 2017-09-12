@@ -33,24 +33,48 @@ $html->appendContent('<div class="container">
             <form method="post" action="generator.php">
             <div class="row">
                 <div class="form-group col-md-5">
-                    <label for="exampleInputEmail1">Last name</label>
-                    <input type="text" class="form-control" placeholder="Enter your last name" name="name" pattern="[A-Za-z]*" required>
+                    <label for="exampleInputEmail1">Nom</label>
+                    <input type="text" class="form-control" placeholder="Nom" name="name" pattern="[A-Za-z]*" required>
                   </div>
                   <div class="form-group col-md-5 offset-md-2">
-                    <label for="exampleInputPassword1">First name</label>
-                    <input type="text" class="form-control" placeholder="Enter your first name" name="fname" pattern="[A-Za-z]*" required>
+                    <label for="exampleInputPassword1">Prénom</label>
+                    <input type="text" class="form-control" placeholder="Prénom" name="fname" pattern="[A-Za-z]*" required>
                   </div>
                   <div class="form-group col-md-5">
-                    <label for="exampleInputPassword1">Birthdate</label>
-                    <input type="text" class="form-control" placeholder="Birthdate to format DD/MM/YYYY" name="datens" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" required>
+                    <label for="exampleInputPassword1">Durée</label>
+                    <input type="text" class="form-control" placeholder="Durée (en jours, maximum 9 jours)" name="period" pattern="[1-9]" required>
                   </div>
                   <div class="form-group col-md-5 offset-md-2">
-                    <label for="exampleInputPassword1">Days to get free</label>
-                    <input type="text" class="form-control" placeholder="Number of days to get free" name="period" pattern="[1-9]" required>
+                    <label for="exampleInputPassword1">Votre maladie</label>
+                    <input type="text" class="form-control" placeholder="Votre maladie" name="maladie" required>
                   </div>
-                  <div class="form-group col-md-6 offset-md-3">
-                    <label for="exampleInputPassword1">Your disease (Votre maladie)</label>
-                    <input type="text" class="form-control" placeholder="Your disease" name="maladie" required>
+                  <div class="form-group col-md-5">
+                    <label for="exampleInputPassword1">Sexe</label>
+                    <select class="form-control" name="sex" required>
+                        <option value="Mr">
+                            Mr.
+                        </option>
+                        <option value="Mme">
+                            Mme.
+                        </option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-5 offset-md-2">
+                    <label for="exampleInputPassword1">Type de certificat</label>
+                    <select class="form-control" name="type" required>
+                        <option value="work">
+                            Travail
+                        </option>
+                        <option value="school">
+                            Ecole
+                        </option>
+                        <option value="sport">
+                            Sport
+                        </option>
+                        <option value="swim">
+                            Piscine
+                        </option>
+                    </select>
                   </div>
           
               </div>
@@ -59,24 +83,24 @@ $html->appendContent('<div class="container">
                     <span>Informations about nearest medical center</span>
                 </div>
                 <div class="col-sm-12 text-center">
-                    <span>Informations about nearest medical center</span>
+                    <span>Informations sur votre médecin le plus proche</span>
                 </div>
                 <div style="height:50px;" ></div>
                 <div class="form-group col-md-5">
-                    <label for="exampleInputEmail1">Doctor street name</label>
-                    <input type="text" class="form-control" placeholder="Doctor\'s street name" name="mstreet" required>
+                    <label for="exampleInputEmail1">Rue de votre médecin</label>
+                    <input type="text" class="form-control" placeholder="Rue de votre médecin" name="mstreet" required>
                   </div>
                   <div class="form-group col-md-5 offset-md-2">
-                    <label for="exampleInputPassword1">Doctor street number</label>
-                    <input type="text" class="form-control" placeholder="Doctor\'s street number" name="mnum" pattern="[0-9]*" required>
+                    <label for="exampleInputPassword1">Numéro de rue du cabinet</label>
+                    <input type="text" class="form-control" placeholder="Numéro de rue du cabinet" name="mnum" pattern="[0-9]*" required>
                   </div>
                   <div class="form-group col-md-5">
-                    <label for="exampleInputPassword1">Doctor zip code (code postal)</label>
-                    <input type="text" class="form-control" placeholder="Doctor zip code" name="mcp" pattern="[0-9]*" required>
+                    <label for="exampleInputPassword1">Code postal</label>
+                    <input type="text" class="form-control" placeholder="Code postal" name="mcp" pattern="[0-9]*" required>
                   </div>
                   <div class="form-group col-md-5 offset-md-2">
-                    <label for="exampleInputPassword1">Doctor city</label>
-                    <input type="text" class="form-control" placeholder="Doctor city" name="mcity" required>
+                    <label for="exampleInputPassword1">Ville du cabinet</label>
+                    <input type="text" class="form-control" placeholder="Ville du cabinet" name="mcity" required>
                   </div>
           
               </div>
