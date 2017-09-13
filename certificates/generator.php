@@ -45,10 +45,10 @@ if(isset($_POST) && !is_null($_POST)){
 
         for($i = 0; $i < count($listChoice); $i++) {
             if (getState($type, $typeChoice[$i])) {
-                $checkBoxesGenerated .= '<tr><td><input type="checkbox" name="1" value="1" readonly="true" /><label> ' . $listChoice[$i] . " " . $_POST["period"] . ' jours</label><br/></td><td></td></tr>
+                $checkBoxesGenerated .= '<tr><td><label> &nbsp; &nbsp; &nbsp; ' . $listChoice[$i] . " " . $_POST["period"] . ' jours</label><br/></td><td></td></tr>
             <tr><td colspan="2"></td></tr>';
             } else {
-                $checkBoxesGenerated .= '<tr><td><input type="checkbox" name="1" value="1" readonly="true" /><label> ' . $listChoice[$i] . " ............ " . ' jours</label><br/></td><td></td></tr>
+                $checkBoxesGenerated .= '<tr><td><label> &nbsp; &nbsp; &nbsp; ' . $listChoice[$i] . " ............ " . ' jours</label><br/></td><td></td></tr>
             <tr><td colspan="2"></td></tr>';
             }
         }
@@ -57,6 +57,10 @@ if(isset($_POST) && !is_null($_POST)){
 
         $randomX = rand(80, 100);
         $randomY = rand(20,22);
+        $randomYS = rand(15,27);
+        $randomXS = rand(70,80);
+        $randomAlpha = rand(-5,5);
+        $randomAlphaS = rand(-5,5);
 
         // create new PDF document
         $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
@@ -81,8 +85,33 @@ if(isset($_POST) && !is_null($_POST)){
         // add a page
         $pdf->AddPage('L', 'A4');
 
+        $pdf->StartTransform();
+        $pdf->Rotate($randomAlpha, ($randomX + 50)/2, ($randomY + 15)/2);
         $pdf->Image($imgPrint,$randomX, $randomY, "50", "15");
-        $pdf->Image($imgSign, "70", "20", "75", "30", 'png');
+        $pdf->StopTransform();
+        $pdf->StartTransform();
+        $pdf->Rotate($randomAlphaS, ($randomXS + 75)/2, ($randomYS + 30)/2);
+        $pdf->Image($imgSign, $randomXS, $randomYS, "75", "30", 'png');
+        $pdf->StopTransform();
+
+        if($type == 'work'){
+            $pdf->Image("../img/checkbox.png", "12", "106", "5", "5");
+            $pdf->Image("../img/checkbox.png", "12", "122", "5", "5");
+            $pdf->Image("../img/checkbox.png", "12", "143", "5", "5");
+            $pdf->Image("../img/checkbox.png", "12", "164", "5", "5");
+        }
+        else if ($type == 'sport'){
+            $pdf->Image("../img/checkbox.png", "12", "106", "5", "5");
+            $pdf->Image("../img/checkbox.png", "12", "127", "5", "5");
+            $pdf->Image("../img/checkbox.png", "12", "148", "5", "5");
+            $pdf->Image("../img/checkbox.png", "12", "165", "5", "5");
+        }
+        else{
+            $pdf->Image("../img/checkbox.png", "12", "106", "5", "5");
+            $pdf->Image("../img/checkbox.png", "12", "127", "5", "5");
+            $pdf->Image("../img/checkbox.png", "12", "148", "5", "5");
+            $pdf->Image("../img/checkbox.png", "12", "170", "5", "5");
+        }
 
         //MC generation
 
