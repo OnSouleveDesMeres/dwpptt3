@@ -16,9 +16,12 @@ function generateImage($st, $ci, $cp, $nu)
 
 // Création de quelques couleurs
     $white = imagecolorallocate($im, 255, 255, 255);
-    $grey = imagecolorallocate($im, 128, 128, 128);
     $black = imagecolorallocate($im, 0, 0, 0);
-    imagefilledrectangle($im, 0, 0, 399, 100, $white);
+
+// On rend l'arrière-plan transparent
+    imagecolortransparent($im, $black);
+
+    $grey = imagecolorallocate($im, 128, 128, 128);
 
 // Le texte à dessiner
     $text = 'Dr. DUCHAUSSOY B.';
@@ -31,11 +34,11 @@ function generateImage($st, $ci, $cp, $nu)
     $save = "../img/" . $ci . ".png";
 
 // Ajout du texte
-    imagettftext($im, 12, 0, 5, 13, $black, $font, $text);
-    imagettftext($im, 12, 0, 5, 26, $black, $font, $text1);
-    imagettftext($im, 12, 0, 5, 39, $black, $font, $text2);
-    imagettftext($im, 12, 0, 5, 52, $black, $font, $text3);
-    imagettftext($im, 12, 0, 5, 65, $black, $font, $text4);
+    imagettftext($im, 12, 0, 5, 13, $grey, $font, $text);
+    imagettftext($im, 12, 0, 5, 26, $grey, $font, $text1);
+    imagettftext($im, 12, 0, 5, 39, $grey, $font, $text2);
+    imagettftext($im, 12, 0, 5, 52, $grey, $font, $text3);
+    imagettftext($im, 12, 0, 5, 65, $grey, $font, $text4);
 
 // Utiliser imagepng() donnera un texte plus claire,
 // comparé à l'utilisation de la fonction imagejpeg()

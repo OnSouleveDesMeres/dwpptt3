@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24a8032d-32eb-4191-b14f-25a8c2ffacaa" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/certificates/navbar.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/certificates/generator.php" afterPath="$PROJECT_DIR$/certificates/generator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/navbar.php" afterPath="$PROJECT_DIR$/resources/navbar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/certificates/imagePrintInfos.php" afterPath="$PROJECT_DIR$/certificates/imagePrintInfos.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="generator.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="generator.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/certificates/generator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="709">
-              <caret line="113" column="9" lean-forward="true" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="9" />
+            <state relative-caret-position="1782">
+              <caret line="136" column="8" lean-forward="true" selection-start-line="136" selection-start-column="8" selection-end-line="136" selection-end-column="8" />
               <folding>
                 <marker date="1505302562014" expanded="true" signature="1926:1932" ph=" " />
                 <marker date="1505302562014" expanded="true" signature="1933:1939" ph=" " />
@@ -107,11 +105,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="imagePrintInfos.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="imagePrintInfos.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/certificates/imagePrintInfos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+            <state relative-caret-position="630">
+              <caret line="40" column="39" lean-forward="false" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -182,9 +180,9 @@
         <option value="$PROJECT_DIR$/certificates/index.php" />
         <option value="$PROJECT_DIR$/shop/index.php" />
         <option value="$PROJECT_DIR$/certificates/test.php" />
-        <option value="$PROJECT_DIR$/certificates/imagePrintInfos.php" />
         <option value="$PROJECT_DIR$/resources/navbar.php" />
         <option value="$PROJECT_DIR$/certificates/generator.php" />
+        <option value="$PROJECT_DIR$/certificates/imagePrintInfos.php" />
       </list>
     </option>
   </component>
@@ -256,11 +254,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/school" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -309,12 +307,14 @@
       <workItem from="1505215802749" duration="1985000" />
       <workItem from="1505247545693" duration="1633000" />
       <workItem from="1505299457918" duration="2491000" />
-      <workItem from="1505302348703" duration="297000" />
+      <workItem from="1505302348703" duration="889000" />
+      <workItem from="1505370249864" duration="15000" />
+      <workItem from="1505379169456" duration="793000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62607000" />
+    <option name="totallyTimeSpent" value="64007000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="29" width="1920" height="1051" extended-state="6" />
@@ -324,12 +324,12 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -798,42 +798,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/navbar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="26" column="95" lean-forward="false" selection-start-line="26" selection-start-column="95" selection-end-line="26" selection-end-column="95" />
-          <folding>
-            <marker date="1505300212697" expanded="true" signature="104:726" ph="..." />
-            <marker date="1505300212697" expanded="true" signature="199:205" ph="..." />
-            <marker date="1505300212697" expanded="true" signature="199:726" ph="..." />
-            <marker date="1505300212697" expanded="true" signature="474:540" ph="..." />
-            <marker date="1505300212697" expanded="true" signature="607:726" ph="..." />
-            <marker date="1505300212697" expanded="true" signature="647:726" ph="..." />
-            <marker date="1505300212697" expanded="true" signature="679:726" ph="..." />
-            <marker date="1505300212697" expanded="true" signature="805:913" ph="..." />
-            <marker date="1505300212697" expanded="true" signature="945:1061" ph="..." />
-            <marker date="1505300212697" expanded="true" signature="1093:1211" ph="..." />
-            <marker date="1505300212697" expanded="true" signature="1364:1689" ph="..." />
-            <marker date="1505300212697" expanded="true" signature="1389:1679" ph="..." />
-            <marker date="1505300212697" expanded="true" signature="1415:1668" ph="..." />
-            <marker date="1505300212697" expanded="true" signature="1451:1653" ph="..." />
-            <marker date="1505300212697" expanded="true" signature="1513:1634" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/certificates/imagePrintInfos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/certificates/generator.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
-          <caret line="113" column="9" lean-forward="true" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="9" />
+        <state relative-caret-position="1782">
+          <caret line="136" column="8" lean-forward="true" selection-start-line="136" selection-start-column="8" selection-end-line="136" selection-end-column="8" />
           <folding>
             <marker date="1505302562014" expanded="true" signature="1926:1932" ph=" " />
             <marker date="1505302562014" expanded="true" signature="1933:1939" ph=" " />
@@ -870,6 +838,38 @@
             <marker date="1505302562014" expanded="true" signature="7307:7526" ph="..." />
             <marker date="1505302562014" expanded="true" signature="7341:7453" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/navbar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="26" column="95" lean-forward="false" selection-start-line="26" selection-start-column="95" selection-end-line="26" selection-end-column="95" />
+          <folding>
+            <marker date="1505300212697" expanded="true" signature="104:726" ph="..." />
+            <marker date="1505300212697" expanded="true" signature="199:205" ph="..." />
+            <marker date="1505300212697" expanded="true" signature="199:726" ph="..." />
+            <marker date="1505300212697" expanded="true" signature="474:540" ph="..." />
+            <marker date="1505300212697" expanded="true" signature="607:726" ph="..." />
+            <marker date="1505300212697" expanded="true" signature="647:726" ph="..." />
+            <marker date="1505300212697" expanded="true" signature="679:726" ph="..." />
+            <marker date="1505300212697" expanded="true" signature="805:913" ph="..." />
+            <marker date="1505300212697" expanded="true" signature="945:1061" ph="..." />
+            <marker date="1505300212697" expanded="true" signature="1093:1211" ph="..." />
+            <marker date="1505300212697" expanded="true" signature="1364:1689" ph="..." />
+            <marker date="1505300212697" expanded="true" signature="1389:1679" ph="..." />
+            <marker date="1505300212697" expanded="true" signature="1415:1668" ph="..." />
+            <marker date="1505300212697" expanded="true" signature="1451:1653" ph="..." />
+            <marker date="1505300212697" expanded="true" signature="1513:1634" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/certificates/imagePrintInfos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="40" column="39" lean-forward="false" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
