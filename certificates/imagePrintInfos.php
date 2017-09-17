@@ -12,14 +12,12 @@ function generateImage($st, $ci, $cp, $nu)
     header('Content-Type: image/png');
 
 // Création de l'image
-    $im = imagecreatetruecolor(180, 67);
+    $im = imagecreate(180, 67);
 
 // Création de quelques couleurs
     $white = imagecolorallocate($im, 255, 255, 255);
-    $black = imagecolorallocate($im, 0, 0, 0);
 
 // On rend l'arrière-plan transparent
-    imagecolortransparent($im, $black);
 
     $grey = imagecolorallocate($im, 128, 128, 128);
 

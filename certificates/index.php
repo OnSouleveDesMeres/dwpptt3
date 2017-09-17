@@ -45,7 +45,7 @@ $html->appendContent('<div class="container">
                     <input type="text" class="form-control" placeholder="Durée (en jours, maximum 9 jours)" name="period" pattern="[1-9]" required>
                   </div>
                   <div class="form-group col-md-5 offset-md-2">
-                    <label for="exampleInputPassword1">Votre maladie</label>
+                    <label for="exampleInputPassword1">Maladie/Sport à pratiquer</label>
                     <input type="text" class="form-control" placeholder="Votre maladie" name="maladie" required>
                   </div>
                   <div class="form-group col-md-5">
@@ -69,10 +69,13 @@ $html->appendContent('<div class="container">
                             Ecole
                         </option>
                         <option value="sport">
-                            Sport
+                            Sport (dispense)
                         </option>
                         <option value="swim">
                             Piscine
+                        </option>
+                        <option value="validationSport">
+                            Sport (participation)
                         </option>
                     </select>
                   </div>

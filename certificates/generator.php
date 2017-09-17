@@ -14,9 +14,13 @@ if(isset($_POST) && !is_null($_POST)){
 
 
     $maladie = "............";
+    $sport = "............";
     $type = $_POST['type'];
     if ($type == 'school'){
         $maladie = $_POST['maladie'];
+    }
+    if ($type == 'validationSport'){
+        $sport = $_POST['maladie'];
     }
     if (isset($_POST['period']) && !is_null($_POST['period']) && isset($_POST['name']) && !is_null($_POST['name']) &&
         isset($_POST['fname']) && !is_null($_POST['fname']) && isset($_POST['mstreet']) && !is_null($_POST['mstreet']) && isset($_POST['mnum']) && !is_null($_POST['mnum']) &&
@@ -24,8 +28,8 @@ if(isset($_POST) && !is_null($_POST)){
 
         $imgSign = '../img/sign.png';
 
-        $listChoice = array(' présente un état de santé nécessitant un arrêt de travail de ', " ne pourra fréquenter l'école, le collège, le lycée, pour cause de {$maladie} pendant ", " doit être dispensé d'éducation physique et sportive pendant ", ' est exempté de piscine pendant ');
-        $typeChoice = array('work', 'school', 'sport', 'swim');
+        $listChoice = array(' présente un état de santé nécessitant un arrêt de travail de ', " ne pourra fréquenter l'école, le collège, le lycée, pour cause de <strong>{$maladie}</strong> pendant ", " doit être dispensé d'éducation physique et sportive pendant ", ' est exempté de piscine pendant ', "présente ce jour, une absence de signes clinique apparent contre-indiquant la pratique du sport suivant : <strong>{$sport}</strong>");
+        $typeChoice = array('work', 'school', 'sport', 'swim', 'validationSport');
 
         $period = $_POST['period'];
         $datens = $_POST['datens'];
@@ -43,15 +47,18 @@ if(isset($_POST) && !is_null($_POST)){
 
         $checkBoxesGenerated = '<table>';
 
-        for($i = 0; $i < count($listChoice); $i++) {
+        for($i = 0; $i < count($listChoice)-1; $i++) {
             if (getState($type, $typeChoice[$i])) {
-                $checkBoxesGenerated .= '<tr><td><label> &nbsp; &nbsp; &nbsp; ' . $listChoice[$i] . " " . $_POST["period"] . ' jours</label><br/></td><td></td></tr>
+                $checkBoxesGenerated .= '<tr><td><label> &nbsp; &nbsp; &nbsp; ' . $listChoice[$i] . " <strong>" . $_POST["period"] . '</strong> jours</label><br/></td><td></td></tr>
             <tr><td colspan="2"></td></tr>';
             } else {
                 $checkBoxesGenerated .= '<tr><td><label> &nbsp; &nbsp; &nbsp; ' . $listChoice[$i] . " ............ " . ' jours</label><br/></td><td></td></tr>
             <tr><td colspan="2"></td></tr>';
             }
         }
+
+        $checkBoxesGenerated .= '<tr><td><label> &nbsp; &nbsp; &nbsp; ' . $listChoice[$i].'</label><br/></td><td></td></tr>
+        <tr><td colspan="2"></td></tr>';
 
         $checkBoxesGenerated .= '</table>';
 
@@ -99,18 +106,21 @@ if(isset($_POST) && !is_null($_POST)){
             $pdf->Image("../img/checkbox.png", "12", "122", "5", "5");
             $pdf->Image("../img/checkbox.png", "12", "143", "5", "5");
             $pdf->Image("../img/checkbox.png", "12", "164", "5", "5");
+            $pdf->Image("../img/checkbox.png", "12", "180", "5", "5");
         }
         else if ($type == 'sport'){
             $pdf->Image("../img/checkbox.png", "12", "106", "5", "5");
             $pdf->Image("../img/checkbox.png", "12", "127", "5", "5");
             $pdf->Image("../img/checkbox.png", "12", "148", "5", "5");
             $pdf->Image("../img/checkbox.png", "12", "165", "5", "5");
+            $pdf->Image("../img/checkbox.png", "12", "180", "5", "5");
         }
         else{
             $pdf->Image("../img/checkbox.png", "12", "106", "5", "5");
             $pdf->Image("../img/checkbox.png", "12", "127", "5", "5");
             $pdf->Image("../img/checkbox.png", "12", "148", "5", "5");
             $pdf->Image("../img/checkbox.png", "12", "170", "5", "5");
+            $pdf->Image("../img/checkbox.png", "12", "185", "5", "5");
         }
 
         //MC generation
