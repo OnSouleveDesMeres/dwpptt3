@@ -50,3 +50,27 @@ main {
 main > .container{
     background-color: white;
 }
+
+#searchbar{
+    height: 50px;
+}
+
+#filter{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#groupcards{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.success-color{
+    background-color: #bdffc7;
+}
+
+.card-text{
+    max-height: 300px;
+    overflow-y: hidden;
+    overflow-scrolling: y;
+}
