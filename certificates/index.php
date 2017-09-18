@@ -25,30 +25,30 @@ $html->appendContent($page);
 
 $html->appendContent('<div class="container">
     <div class="row">
-        <div class="col-xs-12 text-center">
-            <h1>Fill this form then you\'ll be able to generate your medical certificate to pdf format</h1>
+        <div class="col-sm-12 text-center">
+            <h1>Remplissez le formulaire puis cliquez sur Submit pour générer le certificat au format PDF</h1>
         </div>
         <div style="height:100px;" ></div>
         <div class="container">
             <form method="post" action="generator.php">
             <div class="row">
-                <div class="form-group col-md-5">
+                <div class="form-group col-sm-12 col-md-5">
                     <label for="exampleInputEmail1">Nom</label>
                     <input type="text" class="form-control" placeholder="Nom" name="name" pattern="[A-Za-z]*" required>
                   </div>
-                  <div class="form-group col-md-5 offset-md-2">
+                  <div class="form-group col-sm-12 col-md-5 offset-md-2">
                     <label for="exampleInputPassword1">Prénom</label>
                     <input type="text" class="form-control" placeholder="Prénom" name="fname" pattern="[A-Za-z]*" required>
                   </div>
-                  <div class="form-group col-md-5">
+                  <div class="form-group col-sm-12 col-md-5">
                     <label for="exampleInputPassword1">Durée</label>
                     <input type="text" class="form-control" placeholder="Durée (en jours, maximum 9 jours)" name="period" pattern="[1-9]" required>
                   </div>
-                  <div class="form-group col-md-5 offset-md-2">
+                  <div class="form-group col-sm-12 col-md-5 offset-md-2">
                     <label for="exampleInputPassword1">Maladie/Sport à pratiquer</label>
                     <input type="text" class="form-control" placeholder="Votre maladie" name="maladie" required>
                   </div>
-                  <div class="form-group col-md-5">
+                  <div class="form-group col-sm-12 col-md-5">
                     <label for="exampleInputPassword1">Sexe</label>
                     <select class="form-control" name="sex" required>
                         <option value="Mr">
@@ -59,7 +59,7 @@ $html->appendContent('<div class="container">
                         </option>
                     </select>
                   </div>
-                  <div class="form-group col-md-5 offset-md-2">
+                  <div class="form-group col-sm-12 col-md-5 offset-md-2">
                     <label for="exampleInputPassword1">Type de certificat</label>
                     <select class="form-control" name="type" required>
                         <option value="work">
@@ -109,16 +109,18 @@ $html->appendContent('<div class="container">
               </div>
           
             <div style="height:50px;" ></div>
-            <div class="col-xs-12">
+            <div class="col-sm-12">
                 <button type="submit" class="btn btn-primary btn-lg">Submit</button>
             </div>
         </form>
         <div style="height:50px;" ></div>
         <div class="container">
-            <div class="col-lg-8 offset-lg-2 donations">
-                <div class="col-xs-12 text-center"><h3>Want to donate ? Copy this address</h3></div>
+            <div class="col-sm-12 col-lg-8 offset-lg-2 donations">
+                <div class=" col-sm-12 text-center"><h3>Un don ? En bitcoin uniquement</h3></div>
                 <div class="dropdown-divider"></div>
-                <div class="col-xs-12 text-center"><h3 class="no-render">32DnzSSxaE2oAyZKWdPgt5SWvnyYGn2WiD</h3></div>
+                <div class="col-sm-12 text-center">
+                    <textarea class="no-render" readonly>32DnzSSxaE2oAyZKWdPgt5SWvnyYGn2WiD</textarea>
+                </div>
             </div>
         </div>
         <div style="height:50px;" ></div>
@@ -131,8 +133,8 @@ $html->appendContent(getFoot());
 $html->appendContent('
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"></script>
-<script src="bootstrap-4.0.0-alpha.6-dist/js/stick.js"></script>
+<script src="../bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"></script>
+<script src="../bootstrap-4.0.0-alpha.6-dist/js/stick.js"></script>
 <script>$(".stickcontent").stick_in_parent();</script>');
 
 echo $html->toHTML();

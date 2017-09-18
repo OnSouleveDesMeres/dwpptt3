@@ -15,12 +15,10 @@ body > .container{
 }
 
 textarea.no-render{
-    resize: none;
     width: 100%;
     height: 60px;
     white-space: nowrap;
     overflow-x: scroll;
-    background-color: white;
     padding: 10px;
     border-radius: 5px;
 }

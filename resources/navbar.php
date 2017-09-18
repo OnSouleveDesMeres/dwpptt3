@@ -9,14 +9,17 @@
 function getNav(){
     $nav = '<form class="navbar-form navbar-right" action="http://tt3y5d3gkz2x5l4d.onion/auth/" method="post">
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-3">
                         <input id="email" type="email" class="form-control" name="email" value="" placeholder="Email">   
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-3">
                         <input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">   
                     </div>
-                    <div class="col-sm-4">
-                        <button type="submit" class="btn btn-primary">Login</button>  
+                    <div class="col-sm-3">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="http://tt3y5d3gkz2x5l4d.onion/auth/register.php">Pas encore inscrit ?</a>
                     </div>
                 </div>                                     
            </form>';
@@ -36,7 +39,7 @@ function getNav(){
     }
     $html = '
 <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse stickcontent">
-      <span class="navbar-brand text-center">You\'re here to become lazy man</span>
+      <span class="navbar-brand text-center">Bienvenue</span>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navLittleScreen" aria-controls="navLittleScreen" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
