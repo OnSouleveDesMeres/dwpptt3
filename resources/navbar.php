@@ -51,7 +51,7 @@ function getNav(){
             <a class="nav-link" href="http://tt3y5d3gkz2x5l4d.onion">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="http://tt3y5d3gkz2x5l4d.onion/market/">Market (WIP)</a>
+            <a class="nav-link" href="http://tt3y5d3gkz2x5l4d.onion/market/">Market</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="http://tt3y5d3gkz2x5l4d.onion/certificates/">Certificats</a>
