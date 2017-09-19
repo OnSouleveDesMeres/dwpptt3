@@ -19,7 +19,7 @@ function getNav(){
                         <button type="submit" class="btn btn-primary">Login</button>
                     </div>
                     <div class="col-sm-3">
-                        <a href="http://tt3y5d3gkz2x5l4d.onion/auth/register.php">Pas encore inscrit ?</a>
+                        <a href="localhost/dwpptt3/auth/register.php">Pas encore inscrit ?</a>
                     </div>
                 </div>
            </form>';

@@ -1,24 +1,21 @@
 $(document).ready(function() {
-    $("#filter").focus().keyup(function (event) {
+    $("#searchbar").focus().keyup(function (event) {
         var input = $(this);
         var val = input.val();
-        if(val == ''){
-            $('#groupcards div').show();
-        }
         var temp = '';
         for(var i in val){
             temp += val[i]+'(.*)';
         }
         var regexp = '\\b(.*)'+temp+'\\b';
-        $('#groupcards div').show();
-        $('#groupcards div div div.col-xs-8').find('p').each(function () {
+        $('#groupcards div div').show();
+        $('#groupcards div div div div div').find('p').each(function () {
             var p = $(this);
             var results = p.text().match(new RegExp(regexp, "i"));
             if(!results){
-                p.parent().parent().parent().hide();
+                p.parent().parent().parent().parent().hide();
             }
             else {
-                p.parent().parent().parent().show();
+                p.parent().parent().parent().parent().show();
             }
         });
 

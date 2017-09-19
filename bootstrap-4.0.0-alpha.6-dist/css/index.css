@@ -63,12 +63,33 @@ main > .container{
     padding-bottom: 30px;
 }
 
-.success-color{
+.newarticle{
     background-color: #bdffc7;
+    height: 30px;
+    width: 100%;
+    vertical-align: middle;
+    border-bottom: 1px solid black;
 }
 
-.card-text{
-    max-height: 300px;
-    overflow-y: hidden;
-    overflow-scrolling: y;
+.cardarticle{
+    border-radius: 5px;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+.contentinformations{
+    height: 160px;
+    overflow-y: scroll;
+}
+
+.mailcard{
+    background-color: #bdffc7;
+    height: 30px;
+    width: 100%;
+    vertical-align: middle;
+    border-top: 1px solid black;
+}
+
+.grow{
+    font-size: 20px;
 }

@@ -11,6 +11,10 @@ require_once '../resources/navbar.php';
 require_once '../database/Articles.class.php';
 require_once '../database/Users.class.php';
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 $html = new WebPage('index');
 
 $html->appendCssUrl('../bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css');
@@ -25,20 +29,23 @@ $listArticles = Articles::getAll();
 
 if(count($listArticles) != 0) {
     foreach ($listArticles as $listArticle){
-        $user = Users::createFromId($listArticle->getUserId());
+        $user = Users::createFromId($listArticle->getIdUser());
         $listCards .= '
-                <div class="card text-center col-sm-12">
-                    <div class="card-header success-color white-text">
-                        Nouvel article
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title">'.$listArticle->getName().'</h4>
-                        <p class="card-text">'.$listArticle->getContent().'</p>
-                    </div>
-                    <div class="card-footer text-muted success-color">
-                        <p class="mb-0">Contacter la personne</p>
-                    </div>
-                </div>';
+<div class="col-sm-12 col-md-6 col-lg-4 cardarticle">
+    <div class="row">
+        <div class="col-sm-12 text-center newarticle">
+            <h4>Nouvel article</h4>
+        </div>
+        <div class="col-sm-12 contentinformations">
+            <div class="titlecard">
+                <p class="grow">'.$listArticle->getName().'<br/>'.$listArticle->getContent().'</p>
+            </div>
+        </div>
+        <div class="col-sm-12 mailcard text-center">
+            <i class="fa fa-envelope-o"></i> <span class="bluetext">'.$user[0]->getMail().'</span>
+        </div>
+    </div>
+</div>';
 
     }
 }
@@ -66,9 +73,13 @@ $html->appendContent('
                 <div class="dropdown-divider"></div>
             </div>
             
-            <div class="row">
-                <div id="groupcards">
-                    '.$listCards.'
+            <div class="container">
+                <div class="container">
+                    <div id="groupcards">
+                        <div class="row">
+                            '.$listCards.'
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -82,6 +93,7 @@ $html->appendContent('
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="../bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"></script>
 <script src="../bootstrap-4.0.0-alpha.6-dist/js/stick.js"></script>
+<script src="../bootstrap-4.0.0-alpha.6-dist/js/search.js"></script>
 <script>$(".stickcontent").stick_in_parent();</script>');
 
 echo $html->toHTML();
