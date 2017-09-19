@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24a8032d-32eb-4191-b14f-25a8c2ffacaa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth/index.php" afterPath="$PROJECT_DIR$/auth/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sell/addArticle.php" afterPath="$PROJECT_DIR$/sell/addArticle.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -88,7 +87,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bootstrap-4.0.0-alpha.6-dist/css/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -147,11 +146,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addArticle.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="addArticle.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sell/addArticle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="19" column="36" lean-forward="false" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+            <state relative-caret-position="270">
+              <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -258,9 +257,9 @@
         <option value="$PROJECT_DIR$/bootstrap-4.0.0-alpha.6-dist/css/index.css" />
         <option value="$PROJECT_DIR$/resources/navbar.php" />
         <option value="$PROJECT_DIR$/auth/addAccount.php" />
-        <option value="$PROJECT_DIR$/sell/addArticle.php" />
         <option value="$PROJECT_DIR$/database/Articles.class.php" />
         <option value="$PROJECT_DIR$/auth/index.php" />
+        <option value="$PROJECT_DIR$/sell/addArticle.php" />
       </list>
     </option>
   </component>
@@ -424,12 +423,12 @@
       <workItem from="1505813021595" duration="8355000" />
       <workItem from="1505832442078" duration="3914000" />
       <workItem from="1505839226984" duration="9407000" />
-      <workItem from="1505854214656" duration="262000" />
+      <workItem from="1505854214656" duration="478000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117784000" />
+    <option name="totallyTimeSpent" value="118000000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="558" y="239" width="1920" height="1051" extended-state="6" />
@@ -978,14 +977,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sell/addArticle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="19" column="36" lean-forward="false" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/Articles.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="601">
@@ -1029,6 +1020,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap-4.0.0-alpha.6-dist/css/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/auth/addAccount.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1037,10 +1036,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap-4.0.0-alpha.6-dist/css/index.php">
+    <entry file="file://$PROJECT_DIR$/sell/addArticle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
           <folding />
         </state>
       </provider>

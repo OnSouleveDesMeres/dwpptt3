@@ -13,9 +13,12 @@ if (isset($_POST) && !is_null($_POST)){
 
     if(isset($_POST['title']) && !is_null($_POST['title']) && isset($_POST['description']) && !is_null($_POST['description'])){
 
+        $title = mb_ereg_replace("[']+", " ", $_POST['title']);
+        $description = mb_ereg_replace("[']+", " ", $_POST['description']);
+
         $id = Tokens::getIdFromToken($_COOKIE['tt3']);
 
-        Articles::insert($_POST['title'], $_POST['description'], $id[0]->getId());
+        Articles::insert($title, $description, $id[0]->getId());
 
         header('Location: ../market/');
 
