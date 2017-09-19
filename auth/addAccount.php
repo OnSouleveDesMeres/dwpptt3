@@ -9,8 +9,10 @@
 require_once '../database/Users.class.php';
 require_once '../database/Tokens.class.php';
 require_once '../database/key.function.php';
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-ini_set("display_errors", 1);
 
 if(isset($_POST['email']) && $_POST['email'] != null && isset($_POST['password']) && $_POST['password'] != null){
 
@@ -21,7 +23,7 @@ if(isset($_POST['email']) && $_POST['email'] != null && isset($_POST['password']
 
         $chaine = hash_hmac('sha256', $user[0]->getId().$user[0]->getMail().getKey(), getKey());
         Tokens::insert($user[0]->getId(), $chaine);
-        setcookie('tt3',$chaine);
+        setcookie('tt3',$chaine, 0, "/");
 
     }
 
