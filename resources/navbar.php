@@ -7,7 +7,7 @@
  */
 
 function getNav(){
-    $nav = '<form class="navbar-form navbar-right" action="http://localhost/dwpptt3/auth/" method="post">
+    $nav = '<form class="navbar-form navbar-right" action="http://tt3y5d3gkz2x5l4d.onion/auth/" method="post">
                 <div class="row">
                     <div class="col-sm-3">
                         <input id="email" type="email" class="form-control" name="email" value="" placeholder="Email">
@@ -19,7 +19,7 @@ function getNav(){
                         <button type="submit" class="btn btn-primary">Login</button>
                     </div>
                     <div class="col-sm-3">
-                        <a href="localhost/dwpptt3/auth/register.php">Pas encore inscrit ?</a>
+                        <a href="http://tt3y5d3gkz2x5l4d.onion/auth/register.php">Pas encore inscrit ?</a>
                     </div>
                 </div>
            </form>';
