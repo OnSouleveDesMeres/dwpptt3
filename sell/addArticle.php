@@ -15,8 +15,6 @@ if (isset($_POST) && !is_null($_POST)){
 
         $id = Tokens::getIdFromToken($_COOKIE['tt3']);
 
-        var_dump($id);
-
         Articles::insert($_POST['title'], $_POST['description'], $id[0]->getId());
 
         header('Location: ../market/');
