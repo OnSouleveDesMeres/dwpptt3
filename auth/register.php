@@ -52,9 +52,14 @@ HTML;
                         <input type="password" class="form-control" placeholder="Mot de passe" name="password" required>
                       </div>
                   </div>
+                  
                   <div style="height: 50px;"></div>
-                  <div class="col-md-4 offset-md-4"><button type="submit" class="btn btn-info col-sm-8 offset-sm-2">Valider votre inscription</button></div>
-            </form>
+                    <div class="col-md-4 offset-md-4">
+                        <button class="g-recaptcha btn btn-info col-sm-8 offset-sm-2" data-sitekey="6LfHTTEUAAAAABLqEVqSl_1oUwUd4Q6AYsQ68UfN" data-callback="YourOnSubmitFn">
+                            Valider votre inscription
+                        </button>
+                    </div>
+                </form>
             <div style="height:50px;" ></div>
           </div>
         </div>
