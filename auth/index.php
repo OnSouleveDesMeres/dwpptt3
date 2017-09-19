@@ -29,4 +29,4 @@ if(isset($_POST['email']) && $_POST['email'] != null && isset($_POST['password']
 }
 
 //header('Location: http://tt3y5d3gkz2x5l4d.onion/');
-header('Location: http://tt3y5d3gkz2x5l4d.onion/dwpptt3/');
+header('Location: http://tt3y5d3gkz2x5l4d.onion/');
