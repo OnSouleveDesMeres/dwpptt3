@@ -7,37 +7,6 @@
  */
 
 function getNav(){
-    $nav = '<form class="navbar-form navbar-right" action="http://tt3y5d3gkz2x5l4d.onion/auth/" method="post">
-                <div class="row">
-                    <div class="col-sm-3">
-                        <input id="email" type="email" class="form-control" name="email" value="" placeholder="Email">
-                    </div>
-                    <div class="col-sm-3">
-                        <input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">
-                    </div>
-                    <div class="col-sm-3">
-                        <button type="submit" class="btn btn-primary">Login</button>
-                    </div>
-                    <div class="col-sm-3">
-                        <a href="http://tt3y5d3gkz2x5l4d.onion/auth/register.php">Pas encore inscrit ?</a>
-                    </div>
-                </div>
-           </form>';
-    if (isset($_COOKIE) && $_COOKIE != null){
-        $nav = '<form class="navbar-form navbar-right" action="http://localhost/dwpptt3/auth/" method="post">
-                    <ul class="navbar-nav mr-auto">
-                      <li class="nav-item">
-                        <a class="nav-link" href="http://tt3y5d3gkz2x5l4d.onion/profile/">Profil</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="http://tt3y5d3gkz2x5l4d.onion/sell/">Vendre</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="http://tt3y5d3gkz2x5l4d.onion/disconnect/">Déconnexion</a>
-                      </li>
-                    </ul>
-                </form>';
-    }
     $html = '
 <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse stickcontent">
       <span class="navbar-brand text-center">Bienvenue</span>
@@ -51,16 +20,12 @@ function getNav(){
             <a class="nav-link" href="http://tt3y5d3gkz2x5l4d.onion">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="http://tt3y5d3gkz2x5l4d.onion/market/">Market</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="http://tt3y5d3gkz2x5l4d.onion/certificates/">Certificats</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="http://tt3y5d3gkz2x5l4d.onion/security/">Mot de passe aléatoire</a>
           </li>
         </ul>
-      '.$nav.'
       </div>
 </nav>';
 
