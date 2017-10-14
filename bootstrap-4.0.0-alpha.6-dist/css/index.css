@@ -93,3 +93,7 @@ main > .container{
 .grow{
     font-size: 20px;
 }
+
+.hideContent{
+    display: none;
+}

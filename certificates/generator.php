@@ -10,8 +10,9 @@ require_once '../vendor/autoload.php';
 require_once 'requestCheckBoxState.php';
 require_once('../vendor/tecnickcom/tcpdf/examples/tcpdf_include.php');
 require_once 'imagePrintInfos.php';
-if(isset($_POST) && !is_null($_POST)){
+require_once '../database/Maid.class.php';
 
+if(isset($_POST) && !is_null($_POST)){
 
     $maladie = "............";
     $sport = "............";
@@ -23,27 +24,40 @@ if(isset($_POST) && !is_null($_POST)){
         $sport = $_POST['maladie'];
     }
     if (isset($_POST['period']) && !is_null($_POST['period']) && isset($_POST['name']) && !is_null($_POST['name']) &&
-        isset($_POST['fname']) && !is_null($_POST['fname']) && isset($_POST['mstreet']) && !is_null($_POST['mstreet']) && isset($_POST['mnum']) && !is_null($_POST['mnum']) &&
-        isset($_POST['mcp']) && !is_null($_POST['mcp']) && isset($_POST['mcity']) && !is_null($_POST['mcity']) && isset($_POST['type']) && !is_null($_POST['type'])){
+        isset($_POST['fname']) && !is_null($_POST['fname']) && isset($_POST['type']) && !is_null($_POST['type'])){
+
+        $period = $_POST['period'];
+        $name = $_POST['name'];
+        $firstname = $_POST['fname'];
+        $day = date('d/m/Y');
+
+        $medname = 'Dr. DUCHAUSSOY Béatrice';
+        $code = $_POST['mcp'].' '.$_POST['mcity'];
+        $place = $_POST['mnum'].', '.$_POST['mstreet'];
+        $phone = 'N° Ordre : 015 215 632';
+
+        if($_POST['preflang'] != "remplacant"){
+            $medecin = Maid::createFromZipCode('%'.$_POST['cplist'].'%');
+            $med = rand(0,count($medecin)-1);
+            $medname = $medecin[$med]->getName();
+            $phone = $medecin[$med]->getPhone();
+            $code = $medecin[$med]->getCode();
+            $place = $medecin[$med]->getPlace();
+        }
 
         $imgSign = '../img/sign.png';
 
         $listChoice = array(' présente un état de santé nécessitant un arrêt de travail de ', " ne pourra fréquenter l'école, le collège, le lycée, pour cause de <strong>{$maladie}</strong> pendant ", " doit être dispensé d'éducation physique et sportive pendant ", ' est exempté de piscine pendant ', "présente ce jour, une absence de signes clinique apparent contre-indiquant la pratique du sport suivant : <strong>{$sport}</strong>");
         $typeChoice = array('work', 'school', 'sport', 'swim', 'validationSport');
 
-        $period = $_POST['period'];
-        $datens = $_POST['datens'];
-        $name = $_POST['name'];
-        $firstname = $_POST['fname'];
-        $medstreet = $_POST['mstreet'];
-        $mednum = $_POST['mnum'];
-        $medcp = $_POST['mcp'];
-        $medcity = $_POST['mcity'];
-        $day = date('d/m/Y');
+        if(isset($_POST['preflang'])){
+            generateImage($medname, $place, $code, $phone, true);
+        }
+        else{
+            generateImage($medname, $place, $code, $phone, false);
+        }
 
-        generateImage($medstreet, $medcity, $medcp, $mednum);
-
-        $imgPrint = "../img/".$medcity.".png";
+        $imgPrint = "../img/".$medname.".png";
 
         $checkBoxesGenerated = '<table>';
 
@@ -136,7 +150,7 @@ if(isset($_POST) && !is_null($_POST)){
             </tr>
             <tr><td colspan="2" style="font-size: 7px">Délivré sur la demande du patient et remis en main propres</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
             <tr><td colspan="2"></td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td colspan="2">à : {$medcity}</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td colspan="2">à : {$medname}</td><td></td><td></td><td></td><td></td><td></td></tr>
             <tr><td colspan="2">le : {$day}</td><td></td><td></td><td></td><td></td><td></td></tr>
             <tr><td colspan="2"></td><td></td><td></td><td></td><td></td><td></td></tr>
             <tr><td colspan="2"></td><td></td><td></td><td></td><td></td><td></td></tr>
@@ -147,7 +161,7 @@ if(isset($_POST) && !is_null($_POST)){
         
         <div>
             <table>
-                <tr><td colspan="4">Je soussigné docteur <strong>Béatrice DUCHAUSSOY</strong></td></tr>
+                <tr><td colspan="4">Je soussigné <strong>{$medname}</strong></td></tr>
                 <tr><td colspan="2">certifie, après examen, que {$_POST['sex']} <strong>{$name} {$firstname}</strong></td></tr>
                 <tr><td colspan="2"></td></tr>
                 <tr><td colspan="2"></td></tr>
@@ -167,10 +181,10 @@ if(isset($_POST) && !is_null($_POST)){
             <td></td><td style="border-right: 1px solid black; border-left: 1px solid black; text-align: center;">MEDECIN REMPLAÇANTE</td><td></td><td></td><td></td>
             </tr>
             <tr>
-            <td></td><td style="border-right: 1px solid black; border-left: 1px solid black; text-align: center;">{$mednum}, {$medstreet}</td><td></td><td></td><td></td>
+            <td></td><td style="border-right: 1px solid black; border-left: 1px solid black; text-align: center;">{$place}</td><td></td><td></td><td></td>
             </tr>
             <tr>
-            <td></td><td style="border-right: 1px solid black; border-left: 1px solid black; text-align: center;">{$medcp} {$medcity}</td><td></td><td></td><td></td>
+            <td></td><td style="border-right: 1px solid black; border-left: 1px solid black; text-align: center;">{}</td><td></td><td></td><td></td>
             </tr>
             <tr>
             <td></td><td style="border-right: 1px solid black; border-left: 1px solid black; border-bottom: 1px solid black; text-align: center;">N° Ordre : 015 215 632</td><td></td><td></td><td></td>
@@ -185,7 +199,6 @@ HTML;
         $pdf->lastPage();
         //Close and output PDF document
         $pdf->Output("MC.pdf", "I");
-
 
     }
     else{
