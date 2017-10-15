@@ -2,12 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24a8032d-32eb-4191-b14f-25a8c2ffacaa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dwpptt3.iml" afterPath="$PROJECT_DIR$/.idea/dwpptt3.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/000.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/101420.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/Antibes.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/Aÿ Champagne.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/Le Mans.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/Montpellier.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/Nice.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/Paris.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/Pessac.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/Reims.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/bite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/bonjour.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ioznefsnsenf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/jkebfkjesbf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/jksbefjkse.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/print.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/print.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/qdfqsdf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/qlkenqlne.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/qzjkdbqzd.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/seqzdqzd.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/sign.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/skjfqsileufb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/slkefnsefkj.png" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/checkbox.png" afterPath="$PROJECT_DIR$/resources/img/checkbox.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap-4.0.0-alpha.6-dist/css/index.css" afterPath="$PROJECT_DIR$/bootstrap-4.0.0-alpha.6-dist/css/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/certificates/generator.php" afterPath="$PROJECT_DIR$/certificates/generator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/certificates/imagePrintInfos.php" afterPath="$PROJECT_DIR$/certificates/imagePrintInfos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/certificates/index.php" afterPath="$PROJECT_DIR$/certificates/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,8 +42,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/certificates/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="173" column="43" lean-forward="false" selection-start-line="173" selection-start-column="43" selection-end-line="173" selection-end-column="43" />
+            <state relative-caret-position="205">
+              <caret line="161" column="19" lean-forward="true" selection-start-line="161" selection-start-column="19" selection-end-line="161" selection-end-column="19" />
               <folding>
                 <marker date="1507990660187" expanded="true" signature="714:753" ph="..." />
                 <marker date="1507990660187" expanded="true" signature="714:773" ph="..." />
@@ -82,6 +103,46 @@
                 <marker date="1507990660187" expanded="true" signature="8291:8731" ph="{...}" />
                 <marker date="1507990660187" expanded="true" signature="8383:8557" ph="{...}" />
                 <marker date="1507990660187" expanded="true" signature="8567:8721" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="imagePrintInfos.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/certificates/imagePrintInfos.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="61">
+              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="generator.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/certificates/generator.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="150" column="134" lean-forward="false" selection-start-line="150" selection-start-column="134" selection-end-line="150" selection-end-column="134" />
+              <folding>
+                <marker date="1508062610734" expanded="true" signature="2571:2577" ph=" " />
+                <marker date="1508062610734" expanded="true" signature="2578:2584" ph=" " />
+                <marker date="1508062610734" expanded="true" signature="2585:2591" ph=" " />
+                <marker date="1508062610734" expanded="true" signature="2819:2825" ph=" " />
+                <marker date="1508062610734" expanded="true" signature="2826:2832" ph=" " />
+                <marker date="1508062610734" expanded="true" signature="2833:2839" ph=" " />
+                <marker date="1508062610734" expanded="true" signature="3040:3046" ph=" " />
+                <marker date="1508062610734" expanded="true" signature="3047:3053" ph=" " />
+                <marker date="1508062610734" expanded="true" signature="3054:3060" ph=" " />
+                <marker date="1508062610734" expanded="true" signature="5938:5950" ph="..." />
+                <marker date="1508062610734" expanded="true" signature="5951:5968" ph="..." />
+                <marker date="1508062610734" expanded="true" signature="5984:6975" ph="..." />
+                <marker date="1508062610734" expanded="true" signature="6001:6217" ph="..." />
+                <marker date="1508062610734" expanded="true" signature="6102:6137" ph="..." />
+                <marker date="1508062610734" expanded="true" signature="6258:6272" ph="..." />
+                <marker date="1508062610734" expanded="true" signature="7022:7481" ph="..." />
+                <marker date="1508062610734" expanded="true" signature="7042:7202" ph="..." />
+                <marker date="1508062610734" expanded="true" signature="7042:7466" ph="..." />
+                <marker date="1508062610734" expanded="true" signature="7544:8648" ph="..." />
               </folding>
             </state>
           </provider>
@@ -170,8 +231,8 @@
         <option value="$PROJECT_DIR$/database/cp.class.php" />
         <option value="$PROJECT_DIR$/database/insertCP.php" />
         <option value="$PROJECT_DIR$/certificates/imagePrintInfos.php" />
-        <option value="$PROJECT_DIR$/certificates/generator.php" />
         <option value="$PROJECT_DIR$/certificates/index.php" />
+        <option value="$PROJECT_DIR$/certificates/generator.php" />
       </list>
     </option>
   </component>
@@ -211,7 +272,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -222,17 +282,7 @@
             <path>
               <item name="dwpptt3" type="b2602c69:ProjectViewProjectNode" />
               <item name="dwpptt3" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="bootstrap-4.0.0-alpha.6-dist" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="dwpptt3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dwpptt3" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="certificates" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="dwpptt3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dwpptt3" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="dwpptt3" type="b2602c69:ProjectViewProjectNode" />
@@ -244,11 +294,18 @@
               <item name="dwpptt3" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="dwpptt3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dwpptt3" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="img" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -256,12 +313,15 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/img" />
+      <recent name="$PROJECT_DIR$/school" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/img" />
+      <recent name="$PROJECT_DIR$/img" />
       <recent name="$PROJECT_DIR$/database" />
       <recent name="$PROJECT_DIR$/resources" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/school" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -334,12 +394,13 @@
       <workItem from="1507906430597" duration="1849000" />
       <workItem from="1507913930618" duration="2123000" />
       <workItem from="1507917870097" duration="882000" />
-      <workItem from="1507985235538" duration="5244000" />
+      <workItem from="1507985235538" duration="5757000" />
+      <workItem from="1507999291129" duration="3229000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150236000" />
+    <option name="totallyTimeSpent" value="153978000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="558" y="239" width="1920" height="1051" extended-state="6" />
@@ -377,30 +438,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/generator.php" />
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="25" column="210" lean-forward="false" selection-start-line="25" selection-start-column="210" selection-end-line="25" selection-end-column="210" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/navbar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="30" column="10" lean-forward="true" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator.php" />
-    <entry file="file://$PROJECT_DIR$/bootstrap-4.0.0-alpha.6-dist/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator.php" />
     <entry file="file://$PROJECT_DIR$/vendor/tecnickcom/tcpdf/include/tcpdf_static.php" />
     <entry file="file://$PROJECT_DIR$/resources/index.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -589,42 +626,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/certificates/generator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="33" column="43" lean-forward="false" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
-          <folding>
-            <marker date="1507989970725" expanded="true" signature="2561:2567" ph=" " />
-            <marker date="1507989970725" expanded="true" signature="2568:2574" ph=" " />
-            <marker date="1507989970725" expanded="true" signature="2575:2581" ph=" " />
-            <marker date="1507989970725" expanded="true" signature="2809:2815" ph=" " />
-            <marker date="1507989970725" expanded="true" signature="2816:2822" ph=" " />
-            <marker date="1507989970725" expanded="true" signature="2823:2829" ph=" " />
-            <marker date="1507989970725" expanded="true" signature="3030:3036" ph=" " />
-            <marker date="1507989970725" expanded="true" signature="3037:3043" ph=" " />
-            <marker date="1507989970725" expanded="true" signature="3044:3050" ph=" " />
-            <marker date="1507989970725" expanded="true" signature="5706:5718" ph="..." />
-            <marker date="1507989970725" expanded="true" signature="5719:5736" ph="..." />
-            <marker date="1507989970725" expanded="true" signature="5752:6854" ph="..." />
-            <marker date="1507989970725" expanded="true" signature="5769:6106" ph="..." />
-            <marker date="1507989970725" expanded="true" signature="5870:6026" ph="..." />
-            <marker date="1507989970725" expanded="true" signature="6147:6161" ph="..." />
-            <marker date="1507989970725" expanded="true" signature="6901:7360" ph="..." />
-            <marker date="1507989970725" expanded="true" signature="6921:7081" ph="..." />
-            <marker date="1507989970725" expanded="true" signature="6921:7345" ph="..." />
-            <marker date="1507989970725" expanded="true" signature="7423:8527" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/certificates/imagePrintInfos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="23" column="29" lean-forward="false" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/insert.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -665,10 +666,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/img/print.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/img/checkbox.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/img/6707d3d333c04424815645157584464e.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/img/cadre.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/img/sign.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/img/cadre.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/certificates/generator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="150" column="134" lean-forward="false" selection-start-line="150" selection-start-column="134" selection-end-line="150" selection-end-column="134" />
+          <folding>
+            <marker date="1508062610734" expanded="true" signature="2571:2577" ph=" " />
+            <marker date="1508062610734" expanded="true" signature="2578:2584" ph=" " />
+            <marker date="1508062610734" expanded="true" signature="2585:2591" ph=" " />
+            <marker date="1508062610734" expanded="true" signature="2819:2825" ph=" " />
+            <marker date="1508062610734" expanded="true" signature="2826:2832" ph=" " />
+            <marker date="1508062610734" expanded="true" signature="2833:2839" ph=" " />
+            <marker date="1508062610734" expanded="true" signature="3040:3046" ph=" " />
+            <marker date="1508062610734" expanded="true" signature="3047:3053" ph=" " />
+            <marker date="1508062610734" expanded="true" signature="3054:3060" ph=" " />
+            <marker date="1508062610734" expanded="true" signature="5938:5950" ph="..." />
+            <marker date="1508062610734" expanded="true" signature="5951:5968" ph="..." />
+            <marker date="1508062610734" expanded="true" signature="5984:6975" ph="..." />
+            <marker date="1508062610734" expanded="true" signature="6001:6217" ph="..." />
+            <marker date="1508062610734" expanded="true" signature="6102:6137" ph="..." />
+            <marker date="1508062610734" expanded="true" signature="6258:6272" ph="..." />
+            <marker date="1508062610734" expanded="true" signature="7022:7481" ph="..." />
+            <marker date="1508062610734" expanded="true" signature="7042:7202" ph="..." />
+            <marker date="1508062610734" expanded="true" signature="7042:7466" ph="..." />
+            <marker date="1508062610734" expanded="true" signature="7544:8648" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/certificates/imagePrintInfos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/certificates/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="173" column="43" lean-forward="false" selection-start-line="173" selection-start-column="43" selection-end-line="173" selection-end-column="43" />
+        <state relative-caret-position="205">
+          <caret line="161" column="19" lean-forward="true" selection-start-line="161" selection-start-column="19" selection-end-line="161" selection-end-column="19" />
           <folding>
             <marker date="1507990660187" expanded="true" signature="714:753" ph="..." />
             <marker date="1507990660187" expanded="true" signature="714:773" ph="..." />

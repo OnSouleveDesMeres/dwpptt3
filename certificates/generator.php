@@ -45,7 +45,7 @@ if(isset($_POST) && !is_null($_POST)){
             $place = $medecin[$med]->getPlace();
         }
 
-        $imgSign = '../img/sign.png';
+        $imgSign = '../resources/img/sign.png';
 
         $listChoice = array(' présente un état de santé nécessitant un arrêt de travail de ', " ne pourra fréquenter l'école, le collège, le lycée, pour cause de <strong>{$maladie}</strong> pendant ", " doit être dispensé d'éducation physique et sportive pendant ", ' est exempté de piscine pendant ', "présente ce jour, une absence de signes clinique apparent contre-indiquant la pratique du sport suivant : <strong>{$sport}</strong>");
         $typeChoice = array('work', 'school', 'sport', 'swim', 'validationSport');
@@ -115,26 +115,28 @@ if(isset($_POST) && !is_null($_POST)){
         $pdf->Image($imgSign, $randomXS, $randomYS, "75", "30", 'png');
         $pdf->StopTransform();
 
+        $pdf->Image("../resources/img/cadre.png", "74","9","78","44");
+
         if($type == 'work'){
-            $pdf->Image("../img/checkbox.png", "12", "106", "5", "5");
-            $pdf->Image("../img/checkbox.png", "12", "122", "5", "5");
-            $pdf->Image("../img/checkbox.png", "12", "143", "5", "5");
-            $pdf->Image("../img/checkbox.png", "12", "164", "5", "5");
-            $pdf->Image("../img/checkbox.png", "12", "180", "5", "5");
+            $pdf->Image("../resources/img/checkbox.png", "12", "106", "5", "5");
+            $pdf->Image("../resources/img/checkbox.png", "12", "122", "5", "5");
+            $pdf->Image("../resources/img/checkbox.png", "12", "143", "5", "5");
+            $pdf->Image("../resources/img/checkbox.png", "12", "164", "5", "5");
+            $pdf->Image("../resources/img/checkbox.png", "12", "180", "5", "5");
         }
         else if ($type == 'sport'){
-            $pdf->Image("../img/checkbox.png", "12", "106", "5", "5");
-            $pdf->Image("../img/checkbox.png", "12", "127", "5", "5");
-            $pdf->Image("../img/checkbox.png", "12", "148", "5", "5");
-            $pdf->Image("../img/checkbox.png", "12", "165", "5", "5");
-            $pdf->Image("../img/checkbox.png", "12", "180", "5", "5");
+            $pdf->Image("../resources/img/checkbox.png", "12", "106", "5", "5");
+            $pdf->Image("../resources/img/checkbox.png", "12", "127", "5", "5");
+            $pdf->Image("../resources/img/checkbox.png", "12", "148", "5", "5");
+            $pdf->Image("../resources/img/checkbox.png", "12", "165", "5", "5");
+            $pdf->Image("../resources/img/checkbox.png", "12", "180", "5", "5");
         }
         else{
-            $pdf->Image("../img/checkbox.png", "12", "106", "5", "5");
-            $pdf->Image("../img/checkbox.png", "12", "127", "5", "5");
-            $pdf->Image("../img/checkbox.png", "12", "148", "5", "5");
-            $pdf->Image("../img/checkbox.png", "12", "170", "5", "5");
-            $pdf->Image("../img/checkbox.png", "12", "185", "5", "5");
+            $pdf->Image("../resources/img/checkbox.png", "12", "106", "5", "5");
+            $pdf->Image("../resources/img/checkbox.png", "12", "127", "5", "5");
+            $pdf->Image("../resources/img/checkbox.png", "12", "148", "5", "5");
+            $pdf->Image("../resources/img/checkbox.png", "12", "170", "5", "5");
+            $pdf->Image("../resources/img/checkbox.png", "12", "185", "5", "5");
         }
 
         //MC generation
@@ -146,11 +148,11 @@ if(isset($_POST) && !is_null($_POST)){
         </div>
         <table>
             <tr>
-                <th colspan="2"><h2>CERTIFICAT MEDICAL</h2></th><th colspan="2" rowspan="5" style="font-size: 7px; text-align: center;border-right: 1px solid black; border-left: 1px solid black; border-top: 1px solid black; border-bottom: 1px solid black;">signature du médecin</th><th></th><th></th><th></th><th></th>
+                <th colspan="2"><h2>CERTIFICAT MEDICAL</h2></th><th colspan="2" rowspan="5" style="font-size: 7px; text-align: center;">signature du médecin</th><th></th><th></th><th></th><th></th>
             </tr>
             <tr><td colspan="2" style="font-size: 7px">Délivré sur la demande du patient et remis en main propres</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
             <tr><td colspan="2"></td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td colspan="2">à : {$medname}</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td colspan="2">à : {$name} {$firstname}</td><td></td><td></td><td></td><td></td><td></td></tr>
             <tr><td colspan="2">le : {$day}</td><td></td><td></td><td></td><td></td><td></td></tr>
             <tr><td colspan="2"></td><td></td><td></td><td></td><td></td><td></td></tr>
             <tr><td colspan="2"></td><td></td><td></td><td></td><td></td><td></td></tr>
