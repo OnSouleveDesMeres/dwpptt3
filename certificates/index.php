@@ -46,15 +46,15 @@ $html->appendContent('<div class="container">
             <div class="row">
                 <div class="form-group col-sm-12 col-md-5">
                     <label for="exampleInputEmail1">Nom</label>
-                    <input type="text" class="form-control" placeholder="Nom" name="name" pattern="[A-Za-z]*" required>
+                    <input type="text" class="form-control" placeholder="Nom" name="name" pattern="[A-z]+" required>
                   </div>
                   <div class="form-group col-sm-12 col-md-5 offset-md-2">
                     <label for="exampleInputPassword1">Prénom</label>
-                    <input type="text" class="form-control" placeholder="Prénom" name="fname" pattern="[A-Za-z]*" required>
+                    <input type="text" class="form-control" placeholder="Prénom" name="fname" pattern="[A-z]+" required>
                   </div>
                   <div class="form-group col-sm-12 col-md-5">
                     <label for="exampleInputPassword1">Durée</label>
-                    <input type="text" class="form-control" placeholder="Durée (en jours, maximum 9 jours)" name="period" pattern="[1-9]" required>
+                    <input type="text" class="form-control" placeholder="Durée (en jours)" name="period" pattern="[1-9]+" required>
                   </div>
                   <div class="form-group col-sm-12 col-md-5 offset-md-2">
                     <label for="exampleInputPassword1" id="choice">Maladie</label>
@@ -113,11 +113,11 @@ $html->appendContent('<div class="container">
                   </div>
                   <div class="form-group col-md-5 offset-md-2">
                     <label for="exampleInputPassword1">Numéro de rue du cabinet</label>
-                    <input type="text" class="form-control replace" placeholder="Numéro de rue du cabinet" name="mnum" pattern="[0-9]*">
+                    <input type="text" class="form-control replace" placeholder="Numéro de rue du cabinet" name="mnum" pattern="[0-9]+">
                   </div>
                   <div class="form-group col-md-5">
                     <label for="exampleInputPassword1">Code postal</label>
-                    <input type="text" class="form-control replace" placeholder="Code postal" name="mcp" pattern="[0-9]*">
+                    <input type="text" class="form-control replace" placeholder="Code postal" name="mcp" pattern="[0-9]+">
                   </div>
                   <div class="form-group col-md-5 offset-md-2">
                     <label for="exampleInputPassword1">Ville du cabinet</label>
