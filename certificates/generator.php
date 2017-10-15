@@ -139,6 +139,8 @@ if(isset($_POST) && !is_null($_POST)){
             $pdf->Image("../resources/img/checkbox.png", "12", "185", "5", "5");
         }
 
+        $location = mb_ereg_replace('[0-9]{5}', '', $code);
+
         //MC generation
 
         $html = <<<HTML
@@ -152,7 +154,7 @@ if(isset($_POST) && !is_null($_POST)){
             </tr>
             <tr><td colspan="2" style="font-size: 7px">Délivré sur la demande du patient et remis en main propres</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
             <tr><td colspan="2"></td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td colspan="2">à : {$name} {$firstname}</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td colspan="2">à : {$location}</td><td></td><td></td><td></td><td></td><td></td></tr>
             <tr><td colspan="2">le : {$day}</td><td></td><td></td><td></td><td></td><td></td></tr>
             <tr><td colspan="2"></td><td></td><td></td><td></td><td></td><td></td></tr>
             <tr><td colspan="2"></td><td></td><td></td><td></td><td></td><td></td></tr>
