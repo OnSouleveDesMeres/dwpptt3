@@ -54,7 +54,7 @@ $html->appendContent('<div class="container">
                   </div>
                   <div class="form-group col-sm-12 col-md-5">
                     <label for="exampleInputPassword1">Durée</label>
-                    <input type="text" class="form-control" placeholder="Durée (en jours)" name="period" pattern="[1-9]+" required>
+                    <input type="text" class="form-control" placeholder="Durée (en jours)" name="period" pattern="[0-9]+" required>
                   </div>
                   <div class="form-group col-sm-12 col-md-5 offset-md-2">
                     <label for="exampleInputPassword1" id="choice">Maladie</label>
