@@ -45,7 +45,9 @@ if(isset($_POST) && !is_null($_POST)){
             $place = $medecin[$med]->getPlace();
         }
 
-        $imgSign = '../resources/img/sign.png';
+        $sign = rand(0,7);
+
+        $imgSign = "../resources/img/sign{$sign}.png";
 
         $listChoice = array(' présente un état de santé nécessitant un arrêt de travail de ', " ne pourra fréquenter l'école, le collège, le lycée, pour cause de <strong>{$maladie}</strong> pendant ", " doit être dispensé d'éducation physique et sportive pendant ", ' est exempté de piscine pendant ', "présente ce jour, une absence de signes clinique apparent contre-indiquant la pratique du sport suivant : <strong>{$sport}</strong>");
         $typeChoice = array('work', 'school', 'sport', 'swim', 'validationSport');
