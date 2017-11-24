@@ -141,11 +141,10 @@ if(isset($_POST) && !is_null($_POST)){
             $pdf->Image("../resources/img/checkbox.png", "12", "185", "5", "5");
         }
 
-        $location = mb_ereg_replace('[0-9]{4}', '', $code);
+        $location = mb_ereg_replace('[0-9]{5}', '', $code);
 
-        if(strlen($code) == 5){
-            $location = mb_ereg_replace('[0-9]{5}', '', $code);
-        }
+        $location = mb_ereg_replace('[0-9]{4}', '', $location);
+
 
         //MC generation
 

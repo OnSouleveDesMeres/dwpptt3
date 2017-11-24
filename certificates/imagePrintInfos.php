@@ -19,9 +19,9 @@ function generateImage($name, $place, $code, $phone, $rempla)
     header('Content-Type: image/png');
 
 // Création de l'image
-    $im = imagecreate(180, 67);
+    $im = imagecreate(250, 67);
     if($rempla){
-        $im = imagecreate(220, 54);
+        $im = imagecreate(250, 54);
     }
 
 // Création de quelques couleurs
