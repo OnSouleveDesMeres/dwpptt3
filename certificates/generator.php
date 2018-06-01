@@ -10,7 +10,6 @@ require_once '../vendor/autoload.php';
 require_once 'requestCheckBoxState.php';
 require_once('../vendor/tecnickcom/tcpdf/examples/tcpdf_include.php');
 require_once 'imagePrintInfos.php';
-require_once '../database/Maid.class.php';
 
 if(isset($_POST) && !is_null($_POST)){
 
@@ -36,15 +35,6 @@ if(isset($_POST) && !is_null($_POST)){
         $place = $_POST['mnum'].', '.$_POST['mstreet'];
         $phone = 'N° Ordre : 015 215 632';
 
-        if($_POST['preflang'] != "remplacant"){
-            $medecin = Maid::createFromZipCode(''.$_POST['cplist'].' %');
-            $med = rand(0,count($medecin)-1);
-            $medname = $medecin[$med]->getName();
-            $phone = $medecin[$med]->getPhone();
-            $code = $medecin[$med]->getCode();
-            $place = $medecin[$med]->getPlace();
-        }
-
         $sign = rand(0,7);
 
         $imgSign = "../resources/img/sign{$sign}.png";
@@ -52,12 +42,7 @@ if(isset($_POST) && !is_null($_POST)){
         $listChoice = array(' présente un état de santé nécessitant un arrêt de travail de ', " ne pourra fréquenter l'école, le collège, le lycée, pour cause de <strong>{$maladie}</strong> pendant ", " doit être dispensé d'éducation physique et sportive pendant ", ' est exempté de piscine pendant ', "présente ce jour, une absence de signes clinique apparent contre-indiquant la pratique du sport suivant : <strong>{$sport}</strong>");
         $typeChoice = array('work', 'school', 'sport', 'swim', 'validationSport');
 
-        if(isset($_POST['preflang'])){
-            generateImage($medname, $place, $code, $phone, true);
-        }
-        else{
-            generateImage($medname, $place, $code, $phone, false);
-        }
+        generateImage($medname, $place, $code, $phone, true);
 
         $imgPrint = "../img/".$medname.".png";
 
@@ -180,26 +165,6 @@ if(isset($_POST) && !is_null($_POST)){
         </div>
         
         {$checkBoxesGenerated}
-        
-        <!-- A transformer en iamge avec GD
-        <table>
-            <tr>
-            <th></th><th style="border-right: 1px solid black; border-left: 1px solid black; border-top: 1px solid black; text-align: center;">Dr. DUCHAUSSOY B.</th><th></th><th></th><th></th>
-            </tr>
-            <tr>
-            <td></td><td style="border-right: 1px solid black; border-left: 1px solid black; text-align: center;">MEDECIN REMPLAÇANTE</td><td></td><td></td><td></td>
-            </tr>
-            <tr>
-            <td></td><td style="border-right: 1px solid black; border-left: 1px solid black; text-align: center;">{$place}</td><td></td><td></td><td></td>
-            </tr>
-            <tr>
-            <td></td><td style="border-right: 1px solid black; border-left: 1px solid black; text-align: center;">{}</td><td></td><td></td><td></td>
-            </tr>
-            <tr>
-            <td></td><td style="border-right: 1px solid black; border-left: 1px solid black; border-bottom: 1px solid black; text-align: center;">N° Ordre : 015 215 632</td><td></td><td></td><td></td>
-            </tr>
-        </table>
--->
 HTML;
 
         $pdf->writeHTML($html, true, false, true, false, '');

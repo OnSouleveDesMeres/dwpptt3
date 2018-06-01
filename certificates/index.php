@@ -8,7 +8,6 @@
 
 require_once '../resources/webpage.class.php';
 require_once '../resources/navbar.php';
-require_once '../database/cp.class.php';
 
 $html = new WebPage('index');
 
@@ -17,17 +16,6 @@ $html->appendCssUrl('../bootstrap-4.0.0-alpha.6-dist/css/index.css');
 $html->appendCssUrl('../font-awesome-4.7.0/css/font-awesome.css');
 
 $html->appendContent(getNav());
-
-$cpList = CP::getAll();
-
-$list = '<select class="form-control" name="cplist">';
-
-foreach($cpList as $c){
-    $list .= '<option value="'.$c->getCP().'">'.$c->getCP().'</option>';
-}
-
-$list .= '</select>';
-
 
 $page =<<<HTML
 
@@ -93,15 +81,8 @@ $html->appendContent('<div class="container">
                   </div>
           
               </div>
-              <div class="form-group col-sm-12 row">
-                    <input name="preflang" id="titulaire" type="radio" value="titulaire" onchange="showDiv(\'titulaire\')">
-                    <label for="titulaire" class="col-sm-5"><strong>Médecin titulaire</strong></label> 
-                    <input name="preflang" id="remplacant" type="radio" value="remplacant" onchange="showDiv(\'remplacant\')" class="offset-sm-2" checked>
-                    <label for="remplacant" class="col-sm-4"><strong>Médecin remplaçant</strong></label> 
-                  </div>
             <div class="row" id="replace">
                 <div class="col-sm-12 text-center dropdown-divider">
-                    <span>Informations about nearest medical center</span>
                 </div>
                 <div class="col-sm-12 text-center">
                     <span>Informations sur votre médecin le plus proche</span>
@@ -125,14 +106,6 @@ $html->appendContent('<div class="container">
                   </div>
           
               </div>
-            <div class="row hideContent" id="alreadyExists">
-                  <div class="form-group col-sm-12 col-md-5">
-                    <label for="exampleInputPassword1 alreadyExists">Sélectionnez un code postal</label>
-                    '.$list.'
-                  </div>
-              </div>
-          
-            <div style="height:50px;" ></div>
             <div class="col-sm-12">
                 <button type="submit" class="btn btn-primary btn-lg">Submit</button>
             </div>
@@ -160,20 +133,6 @@ $html->appendContent('
 <script src="../bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"></script>
 <script src="../bootstrap-4.0.0-alpha.6-dist/js/stick.js"></script>
 <script>$(".stickcontent").stick_in_parent();</script>
-<script>function showDiv(id) {
-    if(id == "titulaire"){
-        document.getElementById("alreadyExists").classList.remove("hideContent");
-        document.getElementById("replace").classList.add("hideContent");
-        $(".alreadyExists").attr("required", true);
-        $(".replace").attr("required", false);
-    }
-    else {
-        document.getElementById("alreadyExists").classList.add("hideContent");
-        document.getElementById("replace").classList.remove("hideContent");
-        $(".alreadyExists").attr("required", false);
-        $(".replace").attr("required", true);
-    }
-}</script>
 <script>function modifyText() {
     
     var type = document.getElementById("type");
